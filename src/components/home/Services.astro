@@ -1,0 +1,51 @@
+---
+const services = [
+  {
+    step: '01',
+    name: 'Геометрия',
+    description:
+      'Строим стены, сводчатый потолок, карниз, плинтус, камин, стеллажи, редактируем готовые модели (или просто берешь готовую сцену и сразу переходишь к деталям)',
+  },
+  {
+    step: '02',
+    name: 'Материалы',
+    description:
+      'Создаем реалистичную штукатурку, состаренную фреску, паркет, велюр, мрамор, металл и другие покрытия',
+  },
+  {
+    step: '03',
+    name: 'Освещение',
+    description:
+      'Ставим выразительный дневной солнечный свет, чтобы картинка заиграла объемом',
+  },
+  {
+    step: '04',
+    name: 'Постобработка',
+    description:
+      'добавляем атмосферу и эффект запыленного воздуха, сквозь который пробиваются солнечные лучи',
+  },
+];
+---
+
+<section class="py-16 sm:py-20 bg-primary-brown">
+  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+    <div class="flex flex-col gap-12 sm:gap-16">
+      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl dark:text-primary-creme">Программа мастер-класса</h2>
+      <div class="grid gap-8 lg:grid-cols-3">
+        {
+          services.map((service) => (
+            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
+              <p class="text-sm">{service.step}</p>
+              <div class="flex flex-col gap-4 dark:text-primary-brown/10">
+                <h3 class="text-xl font-medium dark:text-primary-creme">{service.name}</h3>
+                <p class="text-primary-brown dark:text-primary-brown text-base sm:text-lg dark:text-primary-creme">
+                  {service.description}
+                </p>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>

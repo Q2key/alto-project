@@ -1,0 +1,21 @@
+---
+const images = [
+'/assets/h1.jpg', 
+  '/assets/h2.jpg', 
+  '/assets/h3.jpg', 
+  '/assets/h4.jpg', 
+  '/assets/h5.jpg', 
+  '/assets/h6.jpg', 
+];
+---
+
+<div class="overflow-x-auto flex space-x-4 py-8">
+    <!-- Horizontal Scroll -->
+    <div class="flex flex-nowrap gap-4">
+      {images.map((image) => (
+        <div class="flex-shrink-0 w-full bg-gray-300 rounded-lg overflow-hidden">
+          <img src={image} alt="image" class="w-full h-full"/>
+        </div>
+      ))}
+    </div>
+  </div>
