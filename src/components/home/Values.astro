@@ -1,51 +1,62 @@
 ---
 const services = [
-    {
-      step: '01',
-      name: '',
-      description:
-        'Ты присылаешь свою визуализацию в чат (можно хоть каждую неделю)',
-    },
-    {
-      step: '02',
-      name: '',
-      description:
-        'Я записываю видеоразбор: показываю, где проседает композиция, реализм или подача — и как это улучшить',
-    },
-    {
-      step: '03',
-      name: '',
-      description:
-        'Разборы публикуются почти каждый день — ты учишься не только на своих, но и на чужих работах',
-    },
-    {
-      step: '04',
-      name: '',
-      description:
-        'Все видео остаются в чате — можно пересматривать в любое время и в удобном темпе',
-    },
+        {
+                step: '01',
+                name: '',
+                description: 'Ты присылаешь свою визуализацию в чат (можно каждую неделю)',
+        },
+        {
+                step: '02',
+                name: '',
+                description:
+                        'Я записываю видеоразбор: где проседает композиция, реализм, подача — и как это улучшить',
+        },
+        {
+                step: '03',
+                name: '',
+                description:
+                        'Разборы публикуются почти каждый день — ты учишься не только на своих, но и на чужих работах',
+        },
+        {
+                step: '04',
+                name: '',
+                description:
+                        'Все видео остаются в чате — можно пересматривать в любое время и в удобном темпе',
+        },
 ];
 ---
 
-<section class="py-16 sm:py-20 bg-primary-brown">
-  <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
-    <div class="flex flex-col gap-12 sm:gap-16">
-      <h2 class="text-3xl font-medium tracking-tight sm:text-4xl dark:text-primary-creme">Как это работает?</h2>
-      <div class="grid gap-8 lg:grid-cols-3">
-        {
-          services.map((service) => (
-            <div class="bg-primary-500/10 dark:bg-primary-400/10 flex flex-col gap-12 rounded-3xl px-6 py-8">
-              <p class="text-sm">{service.step}</p>
-              <div class="flex flex-col gap-4 dark:text-primary-brown/10">
-                <h3 class="text-xl font-medium dark:text-primary-creme">{service.name}</h3>
-                <p class="text-primary-brown dark:text-primary-brown text-base sm:text-lg dark:text-primary-creme">
-                  {service.description}
-                </p>
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </div>
+<section class="bg-primary-brown py-16 sm:py-20">
+        <div class="mx-auto max-w-2xl px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+                <div class="flex flex-col gap-12 sm:gap-16">
+                        <h2
+                                class="text-3xl font-medium tracking-tight dark:text-primary-creme sm:text-4xl"
+                        >
+                                Как это работает?
+                        </h2>
+
+                        <img
+                                class="w-autho h-auto rounded-2xl"
+                                src="/assets/befaf.JPEG"
+                                alt="Before and After picture"
+                        />
+                        <div class="grid gap-8 lg:grid-cols-3">
+                                {
+                                        services.map((service) => (
+                                                <div class="flex flex-col gap-12 rounded-3xl bg-primary-500/10 px-6 py-8 dark:bg-primary-400/10">
+                                                        <p class="text-sm">{service.step}</p>
+                                                        <div class="flex flex-col gap-4 dark:text-primary-brown/10">
+                                                                <h3 class="text-xl font-medium dark:text-primary-creme">
+                                                                        {service.name}
+                                                                </h3>
+                                                                <p class="text-base text-primary-brown dark:text-primary-brown dark:text-primary-creme sm:text-lg">
+                                                                        {service.description}
+                                                                </p>
+                                                        </div>
+                                                </div>
+                                        ))
+                                }
+                        </div>
+                </div>
+        </div>
 </section>
